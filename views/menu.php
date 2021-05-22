@@ -9,13 +9,13 @@
     <title>Inicio</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="views/menu.css">
 </head>
 <body>
     <div class="content-cent">
     <div class="content">
         <div class="title">
-            <h1 class="head">Menú</h1>
+            <h1 class="head">Menú </h1>
         </div>
         <div class="menus">
             <div class="menu-cards">
