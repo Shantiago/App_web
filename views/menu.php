@@ -32,20 +32,20 @@
             </div> 
             <div class="menu-cards">
                 <div class="card">
-                    <h3>Libros</h3>
+                    <h3>Temas</h3>
                     <a href="index.php?page=cursos"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div> 
             <div class="menu-cards">
                 <div class="card">
-                    <h3>Temas</h3>
+                    <h3>Subtemas</h3>
                     <a href="index.php?page=cursosEstudiantes"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div>    
 
             <div class="menu-cards">
                 <div class="card">
-                    <h3>Subtemas</h3>
+                    <h3>Lista de libros</h3>
                     <a href="index.php?page=cursosEstudiantes"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div>
