@@ -21,32 +21,32 @@
             <div class="menu-cards">
                 <div class="card">
                     <h3>Autores</h3>
-                    <a href="index.php?page=estudiantes"><button type="button" class="btn btn-light">Ingresar</button></a>
+                    <a href="index.php?page=Autores"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div> 
             <div class="menu-cards">
                 <div class="card">
                     <h3>Editoriales</h3>
-                   <a href="index.php?page=docentes"><button type="button" class="btn btn-light">Ingresar</button></a>
+                   <a href="index.php?page=Editoriales"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div> 
             <div class="menu-cards">
                 <div class="card">
                     <h3>Temas</h3>
-                    <a href="index.php?page=cursos"><button type="button" class="btn btn-light">Ingresar</button></a>
+                    <a href="index.php?page=Temas"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div> 
             <div class="menu-cards">
                 <div class="card">
                     <h3>Subtemas</h3>
-                    <a href="index.php?page=cursosEstudiantes"><button type="button" class="btn btn-light">Ingresar</button></a>
+                    <a href="index.php?page=Subtemas"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div>    
 
             <div class="menu-cards">
                 <div class="card">
                     <h3>Lista de libros</h3>
-                    <a href="index.php?page=cursosEstudiantes"><button type="button" class="btn btn-light">Ingresar</button></a>
+                    <a href="index.php?page=ListaLibros"><button type="button" class="btn btn-light">Ingresar</button></a>
                 </div>
             </div>
         </div>
