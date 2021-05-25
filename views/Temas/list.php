@@ -1,4 +1,16 @@
+<?php
 
+require_once dirname(__DIR__) . '/../db/conexion_db.php';
+require_once dirname(__DIR__) . '/../utils/model_util.php';
+require_once dirname(__DIR__) . '/../models/model.php';
+require_once dirname(__DIR__) . '/../models/curso.php';
+require_once dirname(__DIR__) . '/../controllers/base_controller.php';
+require_once dirname(__DIR__) . '/../controllers/curso_controller.php';
+
+use controllers\CursoController;
+
+$cursoController = new CursoController;
+?>
 <!Doctype html>
 <html>
     <head>
@@ -13,8 +25,8 @@
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
-                    <th>Nombre</th>
-                    <th>Docente_id</th>
+                    <th>id</th>
+                    <th>NOMBRE</th>
                 </tr>
             </thead>
             <tbody>

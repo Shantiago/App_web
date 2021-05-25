@@ -1,4 +1,16 @@
+<?php
 
+require_once dirname(__DIR__) . '/../db/conexion_db.php';
+require_once dirname(__DIR__) . '/../utils/model_util.php';
+require_once dirname(__DIR__) . '/../models/model.php';
+require_once dirname(__DIR__) . '/../models/estudiante.php';
+require_once dirname(__DIR__) . '/../controllers/base_controller.php';
+require_once dirname(__DIR__) . '/../controllers/estudiante_controller.php';
+
+use controllers\EstudianteController;
+
+$estudianteController = new EstudianteController;
+?>
 <!Doctype html>
 <html>
     <head>
@@ -10,13 +22,13 @@
 
     <body class="container-fluid">
         <h1 style= "color: white;display: flex; align-items: center; justify-content: center;">AUTORES</h1>
-        <a href="index.php?page=estudiantes&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
+        <a href="index.php?page=Autores&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
-                    <th>CÓDIGO</th>
+                    <th>id</th>
                     <th>NOMBRE</th>
-                    <th>EDAD</th>
+
                 </tr>
             </thead>
             <tbody>
