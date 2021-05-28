@@ -49,7 +49,6 @@ class EstudianteController extends BaseController
         $model-> set('codigo',$request['codigo']);
         $model-> set('nombres',$request['nombres']);
         $model-> set('apellidos',$request['apellidos']);
-        $model-> set('edad',$request['edad']);
         $status = $model->update();
         return $status ? 'Registro actualizado':'Error al guardar el actualizado';
     }

@@ -38,11 +38,10 @@ $estudianteController = new EstudianteController;
                     echo '<tr Style = "color: white;">';
                     echo '<td Style = "color: white;">',$row->get('codigo'),'</td>';
                     echo '<td Style = "color: white;">',$row->get('nombres'),' ',$row->get('apellidos'),'</td>';
-                    echo '<td Style = "color: white;">',$row->get('edad'),'</td>';
                 ?>
                     <td style="width: 15%;">
-                        <a href="index.php?page=estudiantes&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
-                        <a href="index.php?page=estudiantes&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
+                        <a href="index.php?page=Autores&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
+                        <a href="index.php?page=Autores&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
                     </td>
                 <?php
                     echo '</tr>';

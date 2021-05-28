@@ -21,7 +21,7 @@ $cursoEstudianteController = new CursoEstudianteController;
 
     <body class="container-fluid">
     <h1 style= "color: white;display: flex; align-items: center; justify-content: center;">LISTA DE LIBROS</h1>
-        <a href="index.php?page=cursosEstudiantes&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
+        <a href="index.php?page=ListaLibros&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
         <table class="table">
             <thead>
                 <tr>
@@ -42,8 +42,8 @@ $cursoEstudianteController = new CursoEstudianteController;
                     echo '<td Style = "color: white;">',$row->get('estudiante_id'),'</td>';
                 ?>
                     <td style="width: 15%;">
-                        <a href="index.php?page=cursosEstudiantes&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
-                        <a href="index.php?page=cursosEstudiantes&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
+                        <a href="index.php?page=ListaLibros&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
+                        <a href="index.php?page=ListaLibros&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
                     </td>
                 <?php
                     echo '</tr>';

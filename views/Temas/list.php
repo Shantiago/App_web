@@ -21,7 +21,7 @@ $cursoController = new CursoController;
 
     <body class="container-fluid">
     <h1 style= "color: white;display: flex; align-items: center; justify-content: center;">TEMAS</h1>
-        <a href="index.php?page=cursos&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
+        <a href="index.php?page=Temas&view=form"><button type="button" class="btn btn-light">Registrar</button></a>
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
@@ -34,12 +34,13 @@ $cursoController = new CursoController;
                 $rows = $cursoController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
                     echo '<td Style = "color: white;">',$row->get('docente_id'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
+
                 ?>
                     <td style="width: 15%;">
-                        <a href="index.php?page=cursos&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
-                        <a href="index.php?page=cursos&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
+                        <a href="index.php?page=Temas&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
+                        <a href="index.php?page=Temas&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
                     </td>
                 <?php
                     echo '</tr Style = "color: white;">';

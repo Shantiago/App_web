@@ -19,7 +19,7 @@ $estado = $docenteController->delete($_GET['id']);
     <meta charset="UTF-8">
     <title>Eliminar registro docente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="views/styles.css">
+    <link rel="stylesheet" href="views/style.css">
 </head>
 <body>
     <div>
@@ -27,7 +27,7 @@ $estado = $docenteController->delete($_GET['id']);
         <h1 style="height: 50vh;color: white;display: flex; align-items: center; justify-content: center;">
             <?php echo $estado; ?>
 </h1>
-        <a style="color: white;display: flex; align-items: center; justify-content: center;" href="index.php?page=docentes"><button type="button" class="btn btn-light">Volver</button></a>
+        <a style="color: white;display: flex; align-items: center; justify-content: center;" href="index.php?page=Editoriales"><button type="button" class="btn btn-light">Volver</button></a>
     </div>
 </body>
 </html>
