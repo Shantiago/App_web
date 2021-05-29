@@ -1,18 +1,18 @@
 <?php
-use controllers\CursoController;
-use models\Curso;
+use controllers\TemaController;
+use models\Tema;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/curso.php';
+require_once dirname(__DIR__) . '/../models/Tema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/curso_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Tema_controller.php';
 
-$cursoController = new CursoController();
+$cursoController = new TemaController();
 $request = [
+    'codigo' => $_POST['codigo'],
     'nombre' => $_POST['nombre'],
-    'docente_id' => $_POST['docente_id'],
 ];
 
 $estado = empty($_POST['id'])? $cursoController->create($request) : $cursoController->update($_POST['id'], $request);

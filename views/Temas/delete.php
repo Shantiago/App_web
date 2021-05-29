@@ -1,14 +1,14 @@
 <?php
-use controllers\CursoController;
+use controllers\TemaController;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/curso.php';
+require_once dirname(__DIR__) . '/../models/Tema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/curso_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Tema_controller.php';
 
-$cursoController = new CursoController();
+$cursoController = new TemaController();
 $estado = $cursoController->delete($_GET['id']);
 
 ?>

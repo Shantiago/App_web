@@ -3,7 +3,7 @@ namespace models;
 
 use models\Model;
 
-class Docente extends Model
+class Editorial extends Model
 {
     protected $id;
     protected $codigo;
@@ -12,6 +12,6 @@ class Docente extends Model
     public function __construct()
     {
         $this->superClass($this);
-        $this->table = 'docentes';
+        $this->table = 'editoriales';
     }
 }

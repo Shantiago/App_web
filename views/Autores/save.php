@@ -1,19 +1,19 @@
 <?php
-use controllers\EstudianteController;
-use models\Estudiante;
+use controllers\AutorController;
+use models\Autor;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/estudiante.php';
+require_once dirname(__DIR__) . '/../models/Autor.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/estudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Autor_controller.php';
 
-$estudianteController = new EstudianteController();
+$estudianteController = new AutorController();
 $request = [
-    'codigo' => $_POST['codigo'],
-    'nombres' => $_POST['nombres'],
-    'apellidos' => $_POST['apellidos'],
+
+    'nombre' => $_POST['nombre'],
+
 ];
 
 $estado = empty($_POST['id'])? $estudianteController->create($request) : $estudianteController->update($_POST['id'], $request);

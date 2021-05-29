@@ -3,13 +3,13 @@
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/curso.php';
+require_once dirname(__DIR__) . '/../models/Tema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/curso_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Tema_controller.php';
 
-use controllers\CursoController;
+use controllers\TemaController;
 
-$cursoController = new CursoController;
+$cursoController = new TemaController;
 ?>
 <!Doctype html>
 <html>
@@ -25,7 +25,7 @@ $cursoController = new CursoController;
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
-                    <th>id</th>
+                    <th>iD</th>
                     <th>NOMBRE</th>
                 </tr>
             </thead>
@@ -34,7 +34,7 @@ $cursoController = new CursoController;
                 $rows = $cursoController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('docente_id'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('id'),'</td>';
                     echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
 
                 ?>
@@ -43,7 +43,7 @@ $cursoController = new CursoController;
                         <a href="index.php?page=Temas&view=form&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Actualizar</button></a>
                     </td>
                 <?php
-                    echo '</tr Style = "color: white;">';
+                    echo '</tr>';
                 }
                 ?>
                 

@@ -3,17 +3,15 @@ namespace models;
 
 use models\Model;
 
-class Estudiante extends Model
+class Tema extends Model
 {
     protected $id;
     protected $codigo;
-    protected $nombres;
-    protected $apellidos;
-    protected $edad;
+    protected $nombre;
 
     public function __construct()
     {
         $this->superClass($this);
-        $this->table = 'estudiantes';
+        $this->table = 'temas';
     }
 }

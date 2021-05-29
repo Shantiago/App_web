@@ -3,13 +3,13 @@
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/listaLibros.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/listaLibros_controller.php';
 
-use controllers\CursoEstudianteController;
+use controllers\ListaLibrosController;
 
-$cursoEstudianteController = new CursoEstudianteController;
+$cursoEstudianteController = new ListaLibrosController;
 ?>
 <!Doctype html>
 <html>
@@ -30,7 +30,7 @@ $cursoEstudianteController = new CursoEstudianteController;
                     <th Style = "color: white;">DESCRIPCION</th>
                     <th Style = "color: white;">FECHA PUBLICACION</th>
                     <th Style = "color: white;">EDICION</th>
-                    <th Style = "color: white;">id EDITORIAL</th>
+                    <th Style = "color: white;">EDITORIAL ID</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,8 +38,11 @@ $cursoEstudianteController = new CursoEstudianteController;
                 $rows = $cursoEstudianteController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('curso_id'),'</td>';
-                    echo '<td Style = "color: white;">',$row->get('estudiante_id'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('descripcion'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('fecha_publicacion'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('edicion'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('editorial_id'),'</td>';
                 ?>
                     <td style="width: 15%;">
                         <a href="index.php?page=ListaLibros&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>

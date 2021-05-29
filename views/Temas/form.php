@@ -1,16 +1,16 @@
 <?php
-use controllers\CursoController;
-use models\Curso;
+use controllers\TemaController;
+use models\Tema;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/curso.php';
+require_once dirname(__DIR__) . '/../models/Tema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/curso_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Tema_controller.php';
 
-$cursoController = new CursoController();
-$curso = empty($_GET['id'])? new Curso(): $cursoController->detail($_GET['id']);
+$cursoController = new TemaController();
+$curso = empty($_GET['id'])? new Tema(): $cursoController->detail($_GET['id']);
 $titulo = empty($_GET['id'])? 'Registrar tema' : 'Modificar tema';
 ?>
 <!DOCTYPE html>
@@ -34,9 +34,9 @@ $titulo = empty($_GET['id'])? 'Registrar tema' : 'Modificar tema';
                 }
             ?>
                     <a style="color: white;display: flex; align-items: center; justify-content: end;" href="index.php?page=Temas"><button type="button" class="btn btn-light">Volver</button></a>
-                <div style="color: white;">
-                    <label for="docente_id">id</label>
-                    <input class="form-control" type="text" name="docente_id" id="docente_id" value="<?php echo $curso->get('docente_id') ?>" required>
+                    <div style="color: white;">
+                    <label for="nombre">id</label>
+                    <input class="form-control" type="text" name="codigo" id="codigo" value="<?php echo $curso->get('codigo') ?>" >
                 </div>
                 <div style="color: white;">
                     <label for="nombre">Nombre</label>

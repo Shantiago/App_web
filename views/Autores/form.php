@@ -1,16 +1,16 @@
 <?php
-use controllers\EstudianteController;
-use models\Estudiante;
+use controllers\AutorController;
+use models\Autor;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/estudiante.php';
+require_once dirname(__DIR__) . '/../models/Autor.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/estudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Autor_controller.php';
 
-$estudianteController = new EstudianteController();
-$estudiante = empty($_GET['id'])? new Estudiante(): $estudianteController->detail($_GET['id']);
+$estudianteController = new AutorController();
+$estudiante = empty($_GET['id'])? new Autor(): $estudianteController->detail($_GET['id']);
 $titulo = empty($_GET['id'])? 'Registrar autor' : 'Modificar autor';
 ?>
 <!DOCTYPE html>
@@ -33,17 +33,9 @@ $titulo = empty($_GET['id'])? 'Registrar autor' : 'Modificar autor';
             }
         ?>
                <a style="color: white;display: flex; align-items: center; justify-content: end;" href="index.php?page=Autores"><button type="button" class="btn btn-light">Volver</button></a> 
-            <div style="color: white;" >
-                <label for="codigo">id</label>
-                <input class="form-control" type="text" name="codigo" id="codigo" value="<?php echo $estudiante->get('codigo') ?>" required>
-            </div>
             <div style="color: white;">
-                <label for="nombres">Nombres</label>
-                <input class="form-control " type="text" name="nombres" id="nombres" value="<?php echo $estudiante->get('nombres') ?>" required>
-            </div>
-            <div style="color: white;">
-                <label for="apellidos">Apellidos</label>
-                <input class="form-control " type="text" name="apellidos" id="apellidos" value="<?php echo $estudiante->get('apellidos') ?>" required>
+                <label for="nombre">Nombres</label>
+                <input class="form-control " type="text" name="nombre" id="nombre" value="<?php echo $estudiante->get('nombre') ?>" required>
             </div>
             <br>
             <div style="color: white;">

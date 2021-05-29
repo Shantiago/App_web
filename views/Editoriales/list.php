@@ -3,13 +3,13 @@
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/docente.php';
+require_once dirname(__DIR__) . '/../models/Editorial.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/docente_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Editorial_controller.php';
 
-use controllers\DocenteController;
+use controllers\EditorialController;
 
-$docenteController = new DocenteController;
+$docenteController = new EditorialController;
 ?>
 <!Doctype html>
 <html>
@@ -26,7 +26,7 @@ $docenteController = new DocenteController;
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
-                    <th>id</th>
+                    <th>ID</th>
                     <th>NOMBRE</th>
                 </tr>
             </thead>
@@ -35,7 +35,7 @@ $docenteController = new DocenteController;
                 $rows = $docenteController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('codigo'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('id'),'</td>';
                     echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
                 ?>
                     <td style="width: 15%;">

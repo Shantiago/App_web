@@ -52,6 +52,7 @@ CREATE TABLE `autores_libros` (
 
 CREATE TABLE `editoriales` (
   `id` int(11) NOT NULL,
+  `codigo` int(11) NOT NULL, 
   `nombre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -101,6 +102,7 @@ CREATE TABLE `sub_temas` (
 
 CREATE TABLE `temas` (
   `id` int(11) NOT NULL,
+  `codigo` int(11) NOT NULL, 
   `nombre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

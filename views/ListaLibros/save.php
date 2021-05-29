@@ -1,18 +1,22 @@
 <?php
-use controllers\CursoEstudianteController;
-use models\CursoEstudiante;
+use controllers\ListaLibrosController;
+use models\ListaLibros;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/listaLibros.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/listaLibros_controller.php';
 
-$cursoEstudianteController = new CursoEstudianteController();
+$cursoEstudianteController = new ListaLibrosController();
 $request = [
-    'curso_id'=> $_POST['curso_id'],
-    'estudiante_id' => $_POST['estudiante_id'],
+    'nombre'=> $_POST['nombre'],
+    'descripcion' => $_POST['descripcion'],
+    'fecha_publicacion'=> $_POST['fecha_publicacion'],
+    'edicion' => $_POST['edicion'],
+    'editorial_id'=> $_POST['editorial_id'],
+
 ];
 
 $estado = empty($_POST['id'])? $cursoEstudianteController->create($request) : $cursoEstudianteController->update($_POST['id'], $request);

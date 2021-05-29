@@ -33,7 +33,7 @@ class ModelUtil
     protected function getDataRows($data, $model)
     {
         $rowData = [];
-        if($data->num_rows > 0){
+
             while($row=$data->fetch_assoc()){
                 $keys = array_keys($row);
                 $instancia = get_class($model);
@@ -43,7 +43,6 @@ class ModelUtil
                 }
                 array_push($rowData,$object);
             }
-        }
         return $rowData;
     }
 

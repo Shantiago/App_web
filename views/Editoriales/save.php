@@ -1,15 +1,15 @@
 <?php
-use controllers\DocenteController;
-use models\Docente;
+use controllers\EditorialController;
+use models\Editorial;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/docente.php';
+require_once dirname(__DIR__) . '/../models/Editorial.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/docente_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Editorial_controller.php';
 
-$docenteController = new DocenteController();
+$docenteController = new EditorialController();
 $request = [
     'codigo' => $_POST['codigo'],
     'nombre' => $_POST['nombre'],

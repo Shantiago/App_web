@@ -1,18 +1,18 @@
 <?php
-use controllers\CursoEstudianteController;
-use models\CursoEstudiante;
+use controllers\SubtemaController;
+use models\Subtema;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/subtema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/subtema_controller.php';
 
-$cursoEstudianteController = new CursoEstudianteController();
+$cursoEstudianteController = new SubtemaController();
 $request = [
-    'curso_id'=> $_POST['curso_id'],
-    'estudiante_id' => $_POST['estudiante_id'],
+    'nombre' => $_POST['nombre'],
+    'tema_id' => $_POST['tema_id'],
 ];
 
 $estado = empty($_POST['id'])? $cursoEstudianteController->create($request) : $cursoEstudianteController->update($_POST['id'], $request);

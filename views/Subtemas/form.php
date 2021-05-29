@@ -1,16 +1,16 @@
 <?php
-use controllers\CursoEstudianteController;
-use models\CursoEstudiante;
+use controllers\SubtemaController;
+use models\Subtema;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/subtema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/subtema_controller.php';
 
-$cursoEstudianteController = new CursoEstudianteController();
-$cursoEstudiante = empty($_GET['id'])? new CursoEstudiante(): $cursoEstudianteController->detail($_GET['id']);
+$cursoEstudianteController = new SubtemaController();
+$cursoEstudiante = empty($_GET['id'])? new Subtema(): $cursoEstudianteController->detail($_GET['id']);
 $titulo = empty($_GET['id'])? 'Registrar subtema' : 'Modificar subtema';
 ?>
 <!DOCTYPE html>
@@ -35,16 +35,12 @@ $titulo = empty($_GET['id'])? 'Registrar subtema' : 'Modificar subtema';
             ?>
                     <a href="index.php?page=Subtemas"><button type="button" class="btn btn-light">Volver</button></a>
                 <div style="color: white;">
-                    <label for="curso_id">Id</label>
-                    <input class="form-control" type="text" name="curso_id" id="curso_id" value="<?php echo $cursoEstudiante->get('curso_id') ?>" required>
+                    <label for="estudiante_id">Nombres</label>
+                    <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $cursoEstudiante->get('nombre') ?>" required>
                 </div>
                 <div style="color: white;">
-                    <label for="estudiante_id">NOMBRE</label>
-                    <input class="form-control" type="text" name="estudiante_id" id="estudiante_id" value="<?php echo $cursoEstudiante->get('estudiante_id') ?>" required>
-                </div>
-                <div style="color: white;">
-                    <label for="estudiante_id">id TEMA</label>
-                    <input class="form-control" type="text" name="estudiante_id" id="estudiante_id"  required>
+                    <label for="estudiante_id">Tema_id</label>
+                    <input class="form-control" type="text" name="tema_id" id="tema_id" value="<?php echo $cursoEstudiante->get('tema_id') ?>" required>
                 </div>
                 <br>
                 <div style="color: white;">

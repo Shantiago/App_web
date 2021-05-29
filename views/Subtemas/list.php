@@ -3,13 +3,13 @@
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/subtema.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Subtema_controller.php';
 
-use controllers\CursoEstudianteController;
+use controllers\SubtemaController;
 
-$cursoEstudianteController = new CursoEstudianteController;
+$cursoEstudianteController = new SubtemaController;
 ?>
 <!Doctype html>
 <html>
@@ -25,9 +25,8 @@ $cursoEstudianteController = new CursoEstudianteController;
         <table class="table">
             <thead>
                 <tr>
-                    <th Style = "color: white;">Id</th>
                     <th Style = "color: white;">NOMBRE</th>
-                    <th Style = "color: white;">Id TEMAS</th>
+                    <th Style = "color: white;">TEMA_ID</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,8 +34,8 @@ $cursoEstudianteController = new CursoEstudianteController;
                 $rows = $cursoEstudianteController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('curso_id'),'</td>';
-                    echo '<td Style = "color: white;">',$row->get('estudiante_id'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
+                    echo '<td Style = "color: white;">',$row->get('tema_id'),'</td>';
                 ?>
                     <td style="width: 15%;">
                         <a href="index.php?page=subtemas&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>

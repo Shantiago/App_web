@@ -1,14 +1,14 @@
 <?php
-use controllers\CursoEstudianteController;
+use controllers\ListaLibrosController;
 
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/cursoEstudiante.php';
+require_once dirname(__DIR__) . '/../models/listaLibros.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/cursoEstudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/listaLibros_controller.php';
 
-$cursoEstudianteController = new CursoEstudianteController();
+$cursoEstudianteController = new ListaLibrosController();
 $estado = $cursoEstudianteController->delete($_GET['id']);
 
 ?>

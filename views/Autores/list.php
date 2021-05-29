@@ -3,13 +3,13 @@
 require_once dirname(__DIR__) . '/../db/conexion_db.php';
 require_once dirname(__DIR__) . '/../utils/model_util.php';
 require_once dirname(__DIR__) . '/../models/model.php';
-require_once dirname(__DIR__) . '/../models/estudiante.php';
+require_once dirname(__DIR__) . '/../models/Autor.php';
 require_once dirname(__DIR__) . '/../controllers/base_controller.php';
-require_once dirname(__DIR__) . '/../controllers/estudiante_controller.php';
+require_once dirname(__DIR__) . '/../controllers/Autor_controller.php';
 
-use controllers\EstudianteController;
+use controllers\AutorController;
 
-$estudianteController = new EstudianteController;
+$estudianteController = new AutorController;
 ?>
 <!Doctype html>
 <html>
@@ -26,7 +26,6 @@ $estudianteController = new EstudianteController;
         <table class="table">
             <thead>
                 <tr Style = "color: white;">
-                    <th>id</th>
                     <th>NOMBRE</th>
 
                 </tr>
@@ -36,8 +35,8 @@ $estudianteController = new EstudianteController;
                 $rows = $estudianteController->index();
                 foreach($rows as $row){
                     echo '<tr Style = "color: white;">';
-                    echo '<td Style = "color: white;">',$row->get('codigo'),'</td>';
-                    echo '<td Style = "color: white;">',$row->get('nombres'),' ',$row->get('apellidos'),'</td>';
+
+                    echo '<td Style = "color: white;">',$row->get('nombre'),'</td>';
                 ?>
                     <td style="width: 15%;">
                         <a href="index.php?page=Autores&view=delete&id=<?php echo $row->get('id'); ?>"><button type="button" class="btn btn-light">Eliminar</button></a>
