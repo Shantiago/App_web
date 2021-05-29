@@ -14,10 +14,37 @@ $cursoEstudianteController = new ListaLibrosController;
 <!Doctype html>
 <html>
     <head>
-    <title>Cursos del estudiante</title>
+    <title>Libros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="views/style.css">
     </head>
+
+ 
+    <script type="text/javascript">
+    function validarForm(formulario) 
+    {
+        if(formulario.palabra.value.length==0) 
+        { 
+            formulario.palabra.focus(); 
+            alert('Debes rellenar este campo'); 
+            return false; 
+         } 
+         return true; 
+     }   
+</script>
+
+
+
+    <form method="POST" action="" onSubmit="return validarForm(this)">
+ 
+ <input type="text" placeholder="Buscar" name="palabra">
+
+ <input type="submit" value="Buscar" name="buscar">
+
+</form>
+
+
+
 
     <body class="container-fluid">
     <h1 style= "color: white;display: flex; align-items: center; justify-content: center;">LISTA DE LIBROS</h1>
@@ -25,7 +52,6 @@ $cursoEstudianteController = new ListaLibrosController;
         <table class="table">
             <thead>
                 <tr>
-                    <th Style = "color: white;">Id </th>
                     <th Style = "color: white;">NOMBRE</th>
                     <th Style = "color: white;">DESCRIPCION</th>
                     <th Style = "color: white;">FECHA PUBLICACION</th>
